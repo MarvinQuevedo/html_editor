@@ -20,10 +20,14 @@ a {
   border: 1px solid blue;
   border-radius: 7px;
   padding: 15px;
-  min-width: 90% !important;
+  min-width: 95% !important;
 }
 
 .editor-body > div{
   float: left;
-  width: 10%;
+  width: 5%;
+}
+
+.save-button{
+  float: right;
 }

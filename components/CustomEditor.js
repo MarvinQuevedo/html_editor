@@ -89,7 +89,8 @@ const CustomEditor = (props) => {
     const instanceRef = useRef(null)
     async function handleSave() {
         const savedData = await instanceRef.current.save()
-        console.log(savedData)
+        console.log("onSave");
+        console.log(convertDataToHtml(savedData.blocks));
     }
 
     return (
@@ -99,7 +100,7 @@ const CustomEditor = (props) => {
                 <EditorJs
                     instanceRef={(instance) => (instanceRef.current = instance)}
                     tools={EDITOR_JS_TOOLS} onChange={(value) => {
-                        console.log(value);
+
                     }}
 
                     onSave={props.onSave}
